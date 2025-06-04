@@ -1,12 +1,22 @@
 import React from "react"
+import { motion } from "framer-motion";
+
 
 const Home = () => {
 
     return (
  <>
    <section class="container  p-10 px-8 py-5">
+
   <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-    <div class="bg-transparent p-6 px-2 py-10">
+<motion.div
+        className="max-w-4xl mx-auto px-6"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <div class="bg-transparent p-6 px-2 py-10">
       <h2 class="text-6xl font-Montserrat font-bold mb-5 tracking-tight text-green-500 ">Offrez une fête d'anniversaire Personnalisée avec Yael design</h2>
       <p class=" py-1">Etiquettes eau, flacons de jus, sacs cadeaux, bâches numériques et bien d'autres personnalisés avec de magnifiques thèmes !</p>
       <br /><button
@@ -17,9 +27,19 @@ const Home = () => {
       </button>
 
     </div>
-    <div class="bg-white p-3 py-6 ">
+
+      </motion.div>
+    
+<motion.div
+        className="max-w-4xl mx-auto px-6"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      ><div class="bg-white p-3 py-6 ">
      <img src="yael.png" alt="" height={580} width={1157} />
-    </div>
+    </div></motion.div>
+    
   </div>
 </section><br />
 

@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 
 import Home from './components/Home'
 import Contacts from './components/Contacts'
+import Apropospage from './pages/Apropospage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,10 +20,12 @@ function App() {
     
     
       <Navbar></Navbar>
-      <Home></Home>
       <Footer></Footer>
-
       
+
+    
+      
+    
 
       
       

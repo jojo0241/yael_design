@@ -1,5 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion";
+import Contactspage from "../pages/Contactspage";
+import { Link, Routes, Router, Route } from 'react-router-dom'
 
 
 const Home = () => {
@@ -19,12 +21,12 @@ const Home = () => {
         <div class="bg-transparent p-6 px-2 py-10">
       <h2 class="text-6xl font-Montserrat font-bold mb-5 tracking-tight text-green-500 ">Offrez une fête d'anniversaire Personnalisée avec Yael design</h2>
       <p class=" py-1">Etiquettes eau, flacons de jus, sacs cadeaux, bâches numériques et bien d'autres personnalisés avec de magnifiques thèmes !</p>
-      <br /><button
+      <br /><Link to="/Contact" ><button
         type="submit"
         className="w-50 bg-gray-800 text-white py-5 rounded-3xl"
       >
         Nous Contacter
-      </button>
+      </button></Link>
 
     </div>
 
@@ -44,52 +46,77 @@ const Home = () => {
 </section><br />
 
 
+<div class="grid grid-cols-1 md:grid-cols-1 gap-7 justify-items-center bg-blue-400">
 
-<div class="w-full h-100 bg-blue-400 text-white p-3 rounded items-center">
+<div class="w-auto h-auto bg-blue-400 text-white p-6 rounded ">
 
     <h2 class="text-2xl text-center p-6 py-11 font-bold items-center">Quelques uns de nos produits</h2>
 
-     <div id="carousel" class="overflow-x-auto whitespace-nowrap scroll-smooth px-15 py-1 flex justify-center">
-      <div class=" w-50 h-50 rounded-full shadow-md mr-10  ">
-        <img src="et1.jpg" alt="" class="w-60 h-50 rounded-full " />
-      </div>
-      <div class="w-50 h-50 rounded-full shadow-md mr-10  ">
-        <img src="TT.jpg" alt="" class="w-60 h-50 rounded-full " />
+    <div className="container py-2 px-0 flex gap-7 flex-wrap justify-items-center">
+
+                  <div class=" w-50 h-50 rounded-full shadow-md  align-center mr-2 justify-items-center ">
+                    
+        <img src="et1.jpg" alt="" class="w-60 h-50 rounded-full " /><h4>Etiquettes eaux</h4>  
         
-      </div>
-      <div class=" w-50 h-50 rounded-full shadow-md mr-10  ">
-        <img src="sacos.jpg" alt="" class="w-60 h-50 rounded-full " />
         
-      </div>
-      <div class=" w-50 h-50 rounded-full shadow-md mr-10  ">
-        <img src="hey2.jpg" alt="" class="w-60 h-50 rounded-full " />
-       
-      </div>
-      
+                  </div>
+                  <div class=" w-50 h-50 rounded-full shadow-md  mr-2 justify-items-center">
+        <img src="TT.jpg" alt="" class="w-60 h-50 rounded-full " /><h3>Pots de pop Corn</h3><br />
+        
+        
+                  </div>
+                  <div class=" w-50 h-50 rounded-full shadow-md  mr-2 justify-items-center">
+        <img src="hey2.jpg" alt="" class="w-60 h-50 rounded-full " /><h3>Baches numeriques</h3><br />
+        
+        
+                  </div>
+                  <div class=" w-50 h-50 rounded-full shadow-md mr-2 justify-items-center">
+        <img src="sacos.jpg" alt="" class="w-60 h-50 rounded-full " /><h3>Sacs cadeaux</h3><br />
+        
+        
+                  </div>
+        
     </div>
     
-</div><br /><br />
+</div>
+<br />
+</div>
+<br /><br />
 
-<div class="w-full h-100 bg-yellow-400 text-white p-3 rounded items-center">
+<div class="grid grid-cols-1 md:grid-cols-1 gap-7 justify-items-center bg-yellow-400">
 
-    <h2 class="text-2xl text-center p-6 py-11 font-bold items-center">Quelques Thèmes Disney</h2>
+<div class="w-auto h-auto bg-yellow-400 text-white p-6 rounded ">
 
-     <div id="carousel" class="overflow-x-auto whitespace-nowrap scroll-smooth px-15 py-1 flex justify-center">
-      <div class=" w-50 h-50 rounded-full shadow-md mr-10 p-1 px-6 bg-yellow-200 ">
-        <img src="pat.png" alt="" height={150} width={150} class=""/>
-      </div>
-      <div class="w-50 h-50 rounded-full shadow-md mr-10 p-1 px-6 bg-yellow-200">
-        <img src="mick.png" alt="" height={140} width={140} class=""/>
-      </div>
-      <div class=" w-50 h-50 rounded-full shadow-md mr-10 p-1 px-6 py-12 bg-yellow-200">
-        <img src="cars.png" alt="" height={500} width={500} class=""/>
-      </div>
-      <div class=" w-50 h-50 rounded-full shadow-md mr-10 p-1 px-6 py-5 bg-yellow-200">
-       <img src="ours.png" alt="" height={200} width={200} class=""/>
-      </div>
-      
+    <h2 class="text-2xl text-center p-6 py-11 font-bold items-center">Quelques Thèmes disney</h2>
+
+    <div className="container py-2 px-0 flex gap-7 flex-wrap justify-items-center">
+
+                  <div class=" w-50 h-50 rounded-full shadow-md  align-center mr-2 justify-items-center bg-yellow-200">
+                    
+        <img src="pat.png" alt="" height={150} width={150} class=""/> 
+        
+        
+                  </div>
+                  <div class=" w-50 h-50 rounded-full shadow-md  mr-2 justify-items-center bg-yellow-200">
+        <img src="mick.png" alt="" height={140} width={140} class="" /><br />
+        
+        
+                  </div>
+                  <div class=" w-50 h-50 rounded-full shadow-md  mr-2 justify-items-center bg-yellow-200">
+        <img src="cars.png" alt="" height={500} width={500} class="py-8" /><br />
+        
+        
+                  </div>
+                  <div class=" w-50 h-50 rounded-full shadow-md mr-2 justify-items-center bg-yellow-200">
+        <img src="ours.png" alt="" height={180} width={180} class="" /><br />
+        
+        
+                  </div>
+        
     </div>
     
+</div>
+<br />
 </div><br />
 
 <section>
@@ -166,12 +193,14 @@ const Home = () => {
   <div class="font-normal text-3xl m-2">N'hesitez pas à nous contacter</div>
 
   <center>
+  <Link to="/Contact" >
   <button
         type="submit"
         className="w-60 bg-green-500 text-white m-4 px-9"
       >
         Nous Contacter
       </button>
+      </Link>
   </center>
 </h2>
 
@@ -183,6 +212,10 @@ const Home = () => {
 
 
 </section>
+
+<Routes>
+  <Route path="/Contact" element={<Contactspage />} />
+</Routes>
 
 
 

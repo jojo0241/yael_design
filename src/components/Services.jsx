@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
+import { image, img } from "framer-motion/client";
 
 const services = [
-  { title: "Étiquettes personnalisées", desc: "Des designs uniques pour bouteilles, sachets, et plus encore." },
-  { title: "Cadeaux invités", desc: "Porte-clés, stickers et goodies à offrir aux enfants." },
-  { title: "Bâches & Posters", desc: "Personnalisez votre décoration avec des visuels géants." },
+  { title: "Étiquettes personnalisées", desc: "Des designs uniques pour bouteilles, sachets, et plus encore." , image : "et1.jpg" },
+  { title: "Cadeaux invités", desc: "Porte-clés, stickers et goodies à offrir aux enfants.", image : "clé.jpeg" },
+  { title: "Bâches & Posters", desc: "Personnalisez votre décoration avec des visuels géants.", image : "bache.jpeg" },
+  { title: "Cartes d'invitations", desc: "Invitez vos proches a votre ceremonie avec nos magnifiques cartes !", image : "carte.jpeg" },
+  { title: "Sacs cadeaux", desc: "De merveilleux sacs cadeaux disponibles en plusieurs couleurs !", image : "sacos.jpg" },
+  { title: "Thèmes anniversaire", desc: "Choisissez le thème qui vous conviens !", image : "shana.jpeg" },
 ];
 
 export default function Services() {
@@ -30,8 +34,11 @@ export default function Services() {
               transition={{ delay: 0.2 * index, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+              <img src={service.image} className="rounded-full h-60 w-60 m-4 mx-auto" />
+              <h3 className="text-xl font-semibold mb-2 text-yellow-400">{service.title}</h3>
               <p>{service.desc}</p>
+              
+              
             </motion.div>
           ))}
         </div>
